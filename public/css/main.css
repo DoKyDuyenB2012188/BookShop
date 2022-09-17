@@ -94,6 +94,10 @@ main {
     cursor: pointer;
   }
   
+  .centered{
+    text-align: center;
+  }
+
   .btn:hover,
   .btn:active {
     background-color: #00695c;
