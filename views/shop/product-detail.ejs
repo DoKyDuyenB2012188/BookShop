@@ -6,9 +6,12 @@
             <h1><%= product.title %></h1>
                 <hr>
                 <div>
-                    <img src="<%= product.imageUrl %>" alt="<%= product.title %>">
+                    <img width="50%" src="<%= product.imageUrl %>" alt="<%=
+                        product.title %>">
                     </div>
                     <h2><%= product.price %></h2>
                         <p><%= product.description %></p>
-                        </main>
-                        <%- include('../includes/end.ejs') %>
+                            <%- include('../includes/end.ejs', {product:
+                                product}) %>
+                            </main>
+                            <%- include('../includes/add-to-cart.ejs') %>
