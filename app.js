@@ -6,6 +6,7 @@ const app = express();
 const adminRoutes = require('./routes/admin');
 const shopRouter = require('./routes/shop');
 const erroController = require('./controllers/error');
+const mongoConnect = require('./until/database');
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(bodyParser.urlencoded({extended: false}));
