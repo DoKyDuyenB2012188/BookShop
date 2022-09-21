@@ -6,7 +6,7 @@ const app = express();
 const adminRoutes = require('./routes/admin');
 const shopRouter = require('./routes/shop');
 const erroController = require('./controllers/error');
-const mongoConnect = require('./until/database');
+const mongoConnect = require('./until/database').mongoConnect;
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(bodyParser.urlencoded({extended: false}));
@@ -14,4 +14,6 @@ app.use(express.static(path.join(__dirname,'public')));
 app.use('/admin',adminRoutes);
 app.use(shopRouter);
 app.use(erroController.get404);
-app.listen(3000);
+mongoConnect(()=>{
+    app.listen(3000);
+});

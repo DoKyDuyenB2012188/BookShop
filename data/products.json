@@ -1,1 +1,16 @@
-[{"id":"0.34965240352062854","title":"The Alchemist","imageUrl":"https://gas.vietsov.com.vn/Photos/ngk.jpg","description":"The novel is written in Portuguese, has been translated into 56 languages, and has sold over 65 million copies in more than 150 countries. This is an in the best book the running book in all time.","price":"19.99"},{"id":"0.6167879955377336","title":"Dac Nhan Tam","imageUrl":"https://reviewsach.net/wp-content/uploads/2021/04/dac-nhan-tam-2021.jpeg","description":"Winning hearts is a book that you need to know how to conquer the opposite person when communicating. So what values ​​did Dale Carnegie bring to help Dac Nhan Tam become the world's leading book?","price":"20"}]
+[
+    {
+        "id": "0.34965240352062854",
+        "title": "The Alchemist",
+        "imageUrl": "https://gas.vietsov.com.vn/Photos/ngk.jpg",
+        "description": "The novel is written in Portuguese, has been translated into 56 languages, and has sold over 65 million copies in more than 150 countries. This is an in the best book the running book in all time.",
+        "price": "19.99"
+    },
+    {
+        "id": "0.6167879955377336",
+        "title": "Dac Nhan Tam",
+        "imageUrl": "https://reviewsach.net/wp-content/uploads/2021/04/dac-nhan-tam-2021.jpeg",
+        "description": "Winning hearts is a book that you need to know how to conquer the opposite person when communicating. So what values ​​did Dale Carnegie bring to help Dac Nhan Tam become the world's leading book?",
+        "price": "20"
+    }
+]
