@@ -1,6 +1,6 @@
 const e = require("express");
 const Product = require("../models/product");
-const mongodb = require('mongodb');
+const mongodb = require("mongodb");
 const ObjectId = mongodb.ObjectId;
 exports.getAddProduct = (req, res, next) => {
   //    res.sendFile(path.join(rootDir,'views','add-product.html'));
@@ -16,7 +16,14 @@ exports.postAddProduct = (req, res, next) => {
   const imageUrl = req.body.imageUrl;
   const price = req.body.price;
   const description = req.body.description;
-  const product = new Product(title, imageUrl, description, price);
+  const product = new Product(
+    title,
+    imageUrl,
+    description,
+    price,
+    null,
+    req.user._id
+  );
   product
     .save()
     .then((result) => {
@@ -90,9 +97,11 @@ exports.getProducts = (req, res, next) => {
 
 exports.postDeleteProduct = (req, res, next) => {
   const prodId = req.body.productId;
-  Product.deleteById(prodId).then(()=>{
-    res.redirect("/admin/products");
-  }).catch((err)=>{
-    console.log(err);
-  });
+  Product.deleteById(prodId)
+    .then((result) => {
+      res.redirect("/admin/products");
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 };
